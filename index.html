@@ -1,0 +1,59 @@
+<html>
+  <head>
+    <title>Friendship Calculator</title>
+
+    <style>
+    body{
+        font-family: Arial, sans-serif;
+        text-align: center;
+    }
+
+    h1{
+        margin-top: 50px;
+    }
+
+    input[type="text"]{
+        padding: 10px;
+        font-size: 18px;
+        margin: 10px;
+    }
+
+    button{
+        padding: 10px 20px;
+        font-size: 18px;
+        margin-top: 20px;
+        background-color: lightblue;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    #result{
+        margin-top: 20px;
+        font-size: 20px;
+        font-weight: bold;
+    }
+    </style>
+    </head>
+    <body>
+    <h1>Friendship Calculator</h1>
+    <p>Enter your name: <input type="text" id="name1"></p>
+    <p>Enter your friend's name: <input type="text" id="name2"></p>
+    <br>
+    <p>Don't take it seriously; rather use it to relax.</p>
+    <button id="calculate-friendship">Calculate Friendship</button>
+    
+    <p id="result"></p>
+
+    <script>
+      const calculateFriendship = () => {
+        const name1 = document.getElementById("name1").value;
+        const name2 = document.getElementById("name2").value;
+        const friendshipScore = Math.floor(Math.random() * 100) + 1;
+        document.getElementById("result").innerHTML = `${name1} and ${name2} have a friendship score of ${friendshipScore}%`;
+    };
+
+        document.getElementById("calculate-friendship").addEventListener("click", calculateFriendship);
+    </script>
+    </body>
+</html>
